@@ -3,7 +3,11 @@
     <h4> <%= link_to post.title, post %></h4>
 
     <div class="text-muted mb-2">
-      <em>Por <%= post.author %> (<%= l post.created_at %>)</em>
+      <em>Por <%= post.author %> (<%= l post.created_at, format: :long %>)</em>
     </div>
+
+    <p><%= post.body.truncate(200)%></p>
+
+    <p class='text-muted'><%= pluralize(post.comments.count, 'Comentário') %></p>
   </div>
 </div>
