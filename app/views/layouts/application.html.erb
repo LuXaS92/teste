@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog do Lucas</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="bg-primary text-white text-center mb-4 p-4">
+     <%= link_to root_path, class: 'text-white' do %>
+       <h1 class'display-4'>Blog do Lucas</h1>
+     <% end %>
+       <p class="lead">Olá, aqui voce encontrará artigos sobre programaçao, tecnologia e carreira</p>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer class='bg-primary text-white text-center mt-5 p-4'>
+      Copyright © Lucas Castro <%= Date.current.year %>
+    </footer>
+  </body>
+</html>

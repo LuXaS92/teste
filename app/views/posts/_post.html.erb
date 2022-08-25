@@ -1,0 +1,9 @@
+<div class="card bg-light">
+  <div class="card-body">
+    <h4> <%= link_to post.title, post %></h4>
+
+    <div class="text-muted mb-2">
+      <em>Por <%= post.author %> (<%= l post.created_at %>)</em>
+    </div>
+  </div>
+</div>
