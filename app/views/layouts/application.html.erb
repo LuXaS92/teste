@@ -28,12 +28,10 @@
           </button>
         </div>
       <% end %>
-    
+        
       <%= yield %>
     </div>
-
-    <footer class='bg-primary text-white text-center mt-5 p-4'>
-      Copyright © Lucas Castro <%= Date.current.year %>
-    </footer>
+    <%= render "shared/footer" %>
+  
   </body>
 </html>
