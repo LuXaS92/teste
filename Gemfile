@@ -31,6 +31,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap'
 gem 'rails-i18n'
 gem 'pry'
+gem 'friendly_id'
+gem 'pg_search'
 
 
 group :development, :test do
