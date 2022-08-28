@@ -6,6 +6,10 @@ class PostsController < ApplicationController
     @posts = Post.order(created_at: :desc)
   end
 
+  def search
+    @posts = Post.search(search_params[:q])
+  end
+
   # GET /posts/1 or /posts/1.json
   def show
     @comments = @post.comments.order(created_at: :desc)
@@ -68,5 +72,9 @@ class PostsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def post_params
       params.require(:post).permit(:title, :author, :body)
+    end
+
+    def search_params
+      params.permit(:q)
     end
 end
